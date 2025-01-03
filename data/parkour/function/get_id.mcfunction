@@ -1,0 +1,3 @@
+execute at @s unless entity @e[type=marker, tag=parkour.marker, distance=..1] run function parkour:error/not_found
+
+execute at @s as @e[type=marker, tag=parkour.marker, distance=..1] as @e[type=marker, tag=parkour.marker, distance=..1] at @s run tellraw @p ["",{"text":"MarkerID: ","color":"red"},{"score":{"name":"@s","objective":"parkour.markerID"}},{"text":"     Parkour: ","color":"red"},{"score":{"name":"@s","objective":"parkour.parkour"}}]

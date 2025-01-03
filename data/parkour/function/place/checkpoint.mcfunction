@@ -1,0 +1,11 @@
+summon marker ~ ~ ~ {Tags: ["parkour.checkpoint", "parkour.marker", "parkour.temp"]}
+scoreboard players operation @e[tag=parkour.temp,limit=1] parkour.markerID = $id parkour.markerID
+scoreboard players add $id parkour.markerID 1
+$scoreboard players set @e[tag=parkour.temp] parkour.parkour $(parkour)
+tag @e[tag=parkour.temp] remove parkour.temp
+
+
+summon text_display ~ ~1.5 ~ {billboard:"center",text:'{"color":"green","shadow_color":2130749952,"text":"Checkpoint"}',background:16711680}
+
+
+summon block_display ~ ~ ~ {Passengers:[{id:"minecraft:block_display",block_state:{Name:"minecraft:polished_tuff_wall",Properties:{up:"true"}},transformation:[0.25f,0f,0f,-0.125f,0f,1f,0f,0.125f,0f,0f,0.25f,-0.125f,0f,0f,0f,1f]},{id:"minecraft:block_display",block_state:{Name:"minecraft:polished_tuff",Properties:{}},transformation:[0.25f,0f,0f,-0.125f,0f,0.125f,0f,0f,0f,0f,0.25f,-0.125f,0f,0f,0f,1f]},{id:"minecraft:block_display",block_state:{Name:"minecraft:polished_tuff",Properties:{}},transformation:[0.1875f,0f,0f,-0.0938f,0f,0.125f,0f,1.0625f,0f,0f,0.1875f,-0.0938f,0f,0f,0f,1f]},{id:"minecraft:block_display",block_state:{Name:"minecraft:bamboo",Properties:{age:"0"}},transformation:[0f,-0.5f,0f,-0.0625f,0.5f,0f,0f,0.6875f,0f,0f,0.001f,-0.0006f,0f,0f,0f,1f]},{id:"minecraft:block_display",block_state:{Name:"minecraft:bamboo",Properties:{age:"0"}},transformation:[0f,-0.5f,0f,-0.0625f,0.5f,0f,0f,0.375f,0f,0f,0.001f,-0.0006f,0f,0f,0f,1f]},{id:"minecraft:block_display",block_state:{Name:"minecraft:bamboo",Properties:{age:"0"}},transformation:[0f,-0.5f,0f,0f,0.5f,0f,0f,0.4375f,0f,0f,0.001f,-0.0006f,0f,0f,0f,1f]},{id:"minecraft:block_display",block_state:{Name:"minecraft:bamboo",Properties:{age:"0"}},transformation:[0f,-0.5f,0f,0f,0.5f,0f,0f,0.625f,0f,0f,0.001f,-0.0006f,0f,0f,0f,1f]},{id:"minecraft:block_display",block_state:{Name:"minecraft:bamboo",Properties:{age:"0"}},transformation:[0f,-0.5f,0f,0.0625f,0.5f,0f,0f,0.5625f,0f,0f,0.001f,-0.0006f,0f,0f,0f,1f]},{id:"minecraft:block_display",block_state:{Name:"minecraft:bamboo",Properties:{age:"0"}},transformation:[0f,-0.5f,0f,0.0625f,0.5f,0f,0f,0.5f,0f,0f,0.001f,-0.0006f,0f,0f,0f,1f]}]}
